@@ -9,14 +9,16 @@ while True:
         print('to young')
         age: int = int(input('age of player: '))
         continue
-    if age >= 18:
+    if age > 18:
+        print('to old - will be disqualified')
+        age: int = int(input('age of player: '))
         break
     if age >= 16 and count < 10:
         midage += 1
         count += 1
         age: int = int(input('age of player: '))
         continue
-    if count < 4:
+    if count < 10:
         age: int = int(input('age of player: '))
         count+=1
         continue
