@@ -1,9 +1,9 @@
 #start
 #בצע לולאה כדי לנסות לקלוט 10 גילאים
-age: int = int(input('age of player: '))
-count: int = 1
-midage: int = 1
-while True:
+bellow16: int = 0
+above16: int = 0
+
+for _ in range (1, 10 + 1):
     age: int = int(input('age of player: '))
     if age < 12:
         print('to young')
@@ -12,18 +12,12 @@ while True:
         print('to old - will be disqualified')
         age: int = int(input('age of player: '))
         break
-    if age >= 16 and count < 10:
-        midage += 1
-        count += 1
-        age: int = int(input('age of player: '))
+    bellow16 += 1
+    if age >= 16:
+        above16 += 1
         continue
-    if count < 10:
-        age: int = int(input('age of player: '))
-        count+=1
-        continue
-    else:
-        print('validplayers count:')
-        print('12 untill 16:', count - midage,'16 and above:',  midage)
-        break
+
+print('validplayers count:')
+print('12 untill 16:', bellow16, '16 and above:',  above16)
 
 #stop
