@@ -1,13 +1,12 @@
 #start
 #בצע לולאה כדי לנסות לקלוט 10 גילאים
-BOLD_RED = "\033[1;31m"
 age: int = int(input('age of player: '))
 count: int = 1
 midage: int = 1
 while True:
+    age: int = int(input('age of player: '))
     if age < 12:
         print('to young')
-        age: int = int(input('age of player: '))
         continue
     if age > 18:
         print('to old - will be disqualified')
